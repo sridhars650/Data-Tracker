@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(142,142,142,1) 100%);
+}
+#usage {
+    font-size: 24px;
+    color: white;
+}
+html
+{
+    width: 300px;  /* 800w 600h - these are max values for chrome extensions apparently*/
+    height: 400px; 
+    color: white;
+}
+
+
+
+#data-div {
+
+}
+
+.reset-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 100px; 
+    width: 100px;
+    height:100px;
+    color:white;
+    border: none;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: transparent;  
+    border-radius: 4px;
+    border: 3px solid rgb(43, 133, 65);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+
+    &:hover {
+        background-color: rgb(43, 133, 65);
+        color: white;
+    }
+}
