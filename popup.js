@@ -6,8 +6,7 @@ function formatBytes(bytes) {
     return parseFloat((bytes / Math.pow(divideValue, newValue)).toFixed(2)) + ' ' + sizes[newValue]; 
   }
   
-  document.addEventListener("DOMContentLoaded", () => {
-    console.log('popup working');
+  document.addEventListener("DOMContentLoaded", () => {s
     chrome.runtime.sendMessage({ type: "getDataUsage" }, (response) => { // method: getDataUsage
       if (chrome.runtime.lastError) { // error connecting to background worker
         console.error('error:', chrome.runtime.lastError.message);
@@ -16,7 +15,6 @@ function formatBytes(bytes) {
       if (response && response.dataUsage !== undefined) { 
         const usage = response.dataUsage;
         document.getElementById("usage").textContent = formatBytes(usage);// sets usage to html
-        console.log(`data usage: ${formatBytes(usage)}`); // debug
       } else { // for if response is undefined when SW is not active
         console.error('failed to get data usage.');
         document.getElementById("usage").textContent = 'Error';
@@ -25,7 +23,6 @@ function formatBytes(bytes) {
   
     document.querySelector('.reset-btn').addEventListener('click', () => { // checks for btn click
       chrome.storage.local.set({ dataUsage: 0 }, () => { // then sets local storagedata to 0
-        console.log('data usage resetted');
         document.getElementById("usage").textContent = formatBytes(0);
       });
     });

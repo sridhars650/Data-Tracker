@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Hide scrollbars */
+    overflow: hidden;
     border: 1px solid black;
 }
 
@@ -78,7 +78,7 @@ h1 {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Moves the button up */
+        transform: translateY(-10px); /* moves the button up; jumping animation*/
     }
     100% {
         transform: translateY(0);
@@ -87,8 +87,8 @@ h1 {
 
 
 html {
-    width: 300px;  /* Ensure popup width */
-    height: 400px; /* Ensure popup height */
+    width: 300px;  /* ensure popup width is not exceeding 800px */
+    height: 400px; /* ensure popup height is not exceeding 600px */
 }
 
 .reset-label {
